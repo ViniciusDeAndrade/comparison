@@ -3,12 +3,11 @@ from fastapi.responses import JSONResponse
 import numpy as np
 import cv2
 from PIL import Image
-import pytesseract
 from io import BytesIO
 from skimage.metrics import structural_similarity as compare_ssim
 
-import os
-print(os.getenv("PATH"))
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 app = FastAPI()
 
